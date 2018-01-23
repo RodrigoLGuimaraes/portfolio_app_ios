@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7gT-nA-Hil">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RodrigoLG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RodrigoLG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,9 @@
                                                                 <constraint firstAttribute="trailing" secondItem="x63-uP-Q9b" secondAttribute="trailing" constant="8" id="LHe-0r-jhX"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Ri3-mg-QgR" secondAttribute="trailing" constant="8" id="NIL-EL-wDK"/>
                                                                 <constraint firstAttribute="bottom" secondItem="x63-uP-Q9b" secondAttribute="bottom" constant="8" id="OcV-NF-xdm"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NiG-du-EFE" secondAttribute="trailing" constant="20" symbolic="YES" id="T90-a7-Jae"/>
                                                                 <constraint firstItem="hoU-LZ-sjJ" firstAttribute="top" secondItem="Ri3-mg-QgR" secondAttribute="bottom" constant="8" id="T98-RW-PL7"/>
+                                                                <constraint firstItem="Rfq-RE-C4q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xko-8i-QvS" secondAttribute="leading" constant="20" symbolic="YES" id="TmA-Eg-53t"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Ckb-Cd-cG4" secondAttribute="trailing" constant="8" id="Y9z-Qn-fcF"/>
                                                                 <constraint firstItem="Ri3-mg-QgR" firstAttribute="top" secondItem="xko-8i-QvS" secondAttribute="top" constant="8" id="YLl-yc-KGB"/>
                                                                 <constraint firstItem="Rfq-RE-C4q" firstAttribute="height" secondItem="hoU-LZ-sjJ" secondAttribute="height" id="aDU-Qf-gLI"/>
@@ -152,7 +154,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gYO-mr-Sv4" secondAttribute="height" multiplier="1:1" id="Sq4-N7-iaO"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="profilePic"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-03-9BF">
+                                <rect key="frame" x="131" y="135.5" width="112.5" height="112.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="pVo-Jl-olC" kind="show" id="gRl-0D-br9"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodrigo Longhi Guimarães" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-di-04k">
                                 <rect key="frame" x="64.5" y="93.5" width="245.5" height="27.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
@@ -171,9 +183,13 @@
                             <constraint firstItem="vFX-Wy-7WG" firstAttribute="width" secondItem="gYO-mr-Sv4" secondAttribute="width" multiplier="1.1" priority="999" id="KGy-T9-8Ma"/>
                             <constraint firstItem="gYO-mr-Sv4" firstAttribute="centerY" secondItem="V3b-Uu-5AU" secondAttribute="centerY" constant="25" id="NT0-Zs-4Zh"/>
                             <constraint firstItem="gYO-mr-Sv4" firstAttribute="top" secondItem="tgX-di-04k" secondAttribute="bottom" constant="14.5" id="Pwh-cq-uKR"/>
+                            <constraint firstItem="tOJ-03-9BF" firstAttribute="centerY" secondItem="gYO-mr-Sv4" secondAttribute="centerY" id="et4-qW-BJP"/>
                             <constraint firstItem="vFX-Wy-7WG" firstAttribute="centerX" secondItem="gYO-mr-Sv4" secondAttribute="centerX" id="fJP-DK-o1n"/>
                             <constraint firstItem="tgX-di-04k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fQO-du-a27"/>
+                            <constraint firstItem="tOJ-03-9BF" firstAttribute="centerX" secondItem="gYO-mr-Sv4" secondAttribute="centerX" id="feL-wV-PRp"/>
                             <constraint firstItem="fIz-iK-w4u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="foe-wP-NEV"/>
+                            <constraint firstItem="tOJ-03-9BF" firstAttribute="height" secondItem="gYO-mr-Sv4" secondAttribute="height" id="iv4-qO-DOj"/>
+                            <constraint firstItem="tOJ-03-9BF" firstAttribute="width" secondItem="gYO-mr-Sv4" secondAttribute="width" id="jrl-da-Cr7"/>
                             <constraint firstItem="V3b-Uu-5AU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mou-8h-Yk3"/>
                             <constraint firstItem="gYO-mr-Sv4" firstAttribute="centerX" secondItem="V3b-Uu-5AU" secondAttribute="centerX" id="q6N-bx-4UJ"/>
                             <constraint firstItem="vFX-Wy-7WG" firstAttribute="top" secondItem="tgX-di-04k" secondAttribute="bottom" constant="8.5" id="wB7-lY-vXX"/>
@@ -183,15 +199,74 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PBs-ZI-lbc"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="profileBackgroundView" destination="vFX-Wy-7WG" id="iO4-aj-lEU"/>
+                        <outlet property="profileBtn" destination="tOJ-03-9BF" id="YyI-Om-UmZ"/>
                         <outlet property="profileImgView" destination="gYO-mr-Sv4" id="6Nh-iy-0m2"/>
                         <outlet property="tableView" destination="aQ8-Mm-wKL" id="eDn-k0-1KY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="376.80000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="SmY-ka-4ZN">
+            <objects>
+                <viewController id="pVo-Jl-olC" customClass="ProfileViewController" customModule="RodrigoLG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XN1-S4-cm8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rodrigo" translatesAutoresizingMaskIntoConstraints="NO" id="Dy6-hg-kJF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="profilePic"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="top" secondItem="XN1-S4-cm8" secondAttribute="top" id="GNc-JY-YWH"/>
+                            <constraint firstItem="8Mo-QZ-LVd" firstAttribute="trailing" secondItem="Dy6-hg-kJF" secondAttribute="trailing" id="K96-lv-anB"/>
+                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="leading" secondItem="8Mo-QZ-LVd" secondAttribute="leading" id="O1v-cZ-zHB"/>
+                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="height" secondItem="XN1-S4-cm8" secondAttribute="height" multiplier="0.4" id="ctC-w3-v0o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Mo-QZ-LVd"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivb-5d-rO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274.4000000000001" y="47.226386806596707"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gbf-i2-0jW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7gT-nA-Hil" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HkB-mW-rzy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.99690271229664429" green="0.0" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eeN-N8-nrJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Thn-uQ-IRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="32"/>
         </scene>
     </scenes>
     <resources>

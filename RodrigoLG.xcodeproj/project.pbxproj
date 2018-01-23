@@ -10,8 +10,9 @@
 		CA5C5AC50EB336DD96DC0FDE /* Pods_RodrigoLG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */; };
 		CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */; };
 		CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */; };
+		CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A612017FA630014C11F /* ProfileViewController.swift */; };
 		CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20842017E27E00DFCBAF /* AppDelegate.swift */; };
-		CEBD20872017E27E00DFCBAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20862017E27E00DFCBAF /* ViewController.swift */; };
+		CEBD20872017E27E00DFCBAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20862017E27E00DFCBAF /* HomeViewController.swift */; };
 		CEBD208A2017E27E00DFCBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD20882017E27E00DFCBAF /* Main.storyboard */; };
 		CEBD208C2017E27E00DFCBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBD208B2017E27E00DFCBAF /* Assets.xcassets */; };
 		CEBD208F2017E27E00DFCBAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD208D2017E27E00DFCBAF /* LaunchScreen.storyboard */; };
@@ -22,9 +23,10 @@
 		CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.debug.xcconfig"; sourceTree = "<group>"; };
 		CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
+		CEBC6A612017FA630014C11F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CEBD20812017E27E00DFCBAF /* RodrigoLG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RodrigoLG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBD20842017E27E00DFCBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEBD20862017E27E00DFCBAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEBD20862017E27E00DFCBAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEBD20892017E27E00DFCBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEBD208B2017E27E00DFCBAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBD208E2017E27E00DFCBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +72,15 @@
 			path = TableViews;
 			sourceTree = "<group>";
 		};
+		CEBC6A5C2017F9C80014C11F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD20862017E27E00DFCBAF /* HomeViewController.swift */,
+				CEBC6A612017FA630014C11F /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CEBD20782017E27E00DFCBAF = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +102,9 @@
 		CEBD20832017E27E00DFCBAF /* RodrigoLG */ = {
 			isa = PBXGroup;
 			children = (
+				CEBC6A5C2017F9C80014C11F /* Controllers */,
 				CEBC6A572017F2A70014C11F /* TableViews */,
 				CEBD20842017E27E00DFCBAF /* AppDelegate.swift */,
-				CEBD20862017E27E00DFCBAF /* ViewController.swift */,
 				CEBD20882017E27E00DFCBAF /* Main.storyboard */,
 				CEBD208B2017E27E00DFCBAF /* Assets.xcassets */,
 				CEBD208D2017E27E00DFCBAF /* LaunchScreen.storyboard */,
@@ -234,7 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
-				CEBD20872017E27E00DFCBAF /* ViewController.swift in Sources */,
+				CEBD20872017E27E00DFCBAF /* HomeViewController.swift in Sources */,
+				CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */,
 				CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */,
 				CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */,
 			);

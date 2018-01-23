@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var profileImgView: UIImageView!
     @IBOutlet weak var profileBackgroundView: UIView!
+    @IBOutlet weak var profileBtn: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,11 +20,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.delegate = self
         tableView.backgroundColor = UIColor.purple.withAlphaComponent(0)
         tableView.backgroundView = nil
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        profileImgView.layer.cornerRadius = profileImgView.bounds.width/2
+        profileBackgroundView.layer.cornerRadius = profileBackgroundView.bounds.width/2
+        profileBtn.layer.cornerRadius = profileBtn.bounds.width/2
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - TABLEVIEWDELEGATE
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        //TODO
+    }
+    
+    // MARK: - TABLEVIEWDATASOURCE
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -42,17 +65,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
-    
-    override func viewDidLayoutSubviews() {
-        profileImgView.layer.cornerRadius = profileImgView.bounds.width / 2
-        profileBackgroundView.layer.cornerRadius = profileBackgroundView.bounds.width/2
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
