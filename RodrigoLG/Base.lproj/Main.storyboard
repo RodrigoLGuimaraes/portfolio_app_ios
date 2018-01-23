@@ -130,6 +130,12 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="dateLabel" destination="NiG-du-EFE" id="IjK-sz-Z5n"/>
+                                                    <outlet property="postImage" destination="Ckb-Cd-cG4" id="kAP-pm-hm7"/>
+                                                    <outlet property="postText" destination="x63-uP-Q9b" id="7Rx-3m-bz2"/>
+                                                    <outlet property="titleLabel" destination="Ri3-mg-QgR" id="BLy-Gh-odh"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

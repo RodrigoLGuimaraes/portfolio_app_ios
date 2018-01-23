@@ -11,6 +11,9 @@
 		CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */; };
 		CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */; };
 		CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A612017FA630014C11F /* ProfileViewController.swift */; };
+		CEBC6A65201800430014C11F /* UIImageView+download.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A64201800430014C11F /* UIImageView+download.swift */; };
+		CEBC6A68201800670014C11F /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A67201800670014C11F /* BlogPost.swift */; };
+		CEBC6A6A2018007C0014C11F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A692018007C0014C11F /* Helpers.swift */; };
 		CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20842017E27E00DFCBAF /* AppDelegate.swift */; };
 		CEBD20872017E27E00DFCBAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20862017E27E00DFCBAF /* HomeViewController.swift */; };
 		CEBD208A2017E27E00DFCBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD20882017E27E00DFCBAF /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 		CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		CEBC6A612017FA630014C11F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEBC6A64201800430014C11F /* UIImageView+download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+download.swift"; sourceTree = "<group>"; };
+		CEBC6A67201800670014C11F /* BlogPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		CEBC6A692018007C0014C11F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		CEBD20812017E27E00DFCBAF /* RodrigoLG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RodrigoLG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBD20842017E27E00DFCBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEBD20862017E27E00DFCBAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +87,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		CEBC6A632018002C0014C11F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC6A692018007C0014C11F /* Helpers.swift */,
+				CEBC6A64201800430014C11F /* UIImageView+download.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEBC6A66201800590014C11F /* BlogHandling */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC6A67201800670014C11F /* BlogPost.swift */,
+			);
+			path = BlogHandling;
+			sourceTree = "<group>";
+		};
 		CEBD20782017E27E00DFCBAF = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +125,8 @@
 		CEBD20832017E27E00DFCBAF /* RodrigoLG */ = {
 			isa = PBXGroup;
 			children = (
+				CEBC6A66201800590014C11F /* BlogHandling */,
+				CEBC6A632018002C0014C11F /* Helpers */,
 				CEBC6A5C2017F9C80014C11F /* Controllers */,
 				CEBC6A572017F2A70014C11F /* TableViews */,
 				CEBD20842017E27E00DFCBAF /* AppDelegate.swift */,
@@ -247,6 +272,9 @@
 				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
 				CEBD20872017E27E00DFCBAF /* HomeViewController.swift in Sources */,
 				CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */,
+				CEBC6A6A2018007C0014C11F /* Helpers.swift in Sources */,
+				CEBC6A65201800430014C11F /* UIImageView+download.swift in Sources */,
+				CEBC6A68201800670014C11F /* BlogPost.swift in Sources */,
 				CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */,
 				CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */,
 			);
