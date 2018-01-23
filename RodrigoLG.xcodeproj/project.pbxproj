@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5C5AC50EB336DD96DC0FDE /* Pods_RodrigoLG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */; };
+		CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */; };
+		CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */; };
 		CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20842017E27E00DFCBAF /* AppDelegate.swift */; };
 		CEBD20872017E27E00DFCBAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD20862017E27E00DFCBAF /* ViewController.swift */; };
 		CEBD208A2017E27E00DFCBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD20882017E27E00DFCBAF /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05AD22D878B24323B81E7936 /* Pods-RodrigoLG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.release.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.release.xcconfig"; sourceTree = "<group>"; };
+		CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.debug.xcconfig"; sourceTree = "<group>"; };
+		CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		CEBD20812017E27E00DFCBAF /* RodrigoLG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RodrigoLG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBD20842017E27E00DFCBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEBD20862017E27E00DFCBAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		CEBD208B2017E27E00DFCBAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBD208E2017E27E00DFCBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBD20902017E27E00DFCBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RodrigoLG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5C5AC50EB336DD96DC0FDE /* Pods_RodrigoLG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61B443875EE5E1C4AC17F400 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A2E09960E1B79824D0DC528 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */,
+				05AD22D878B24323B81E7936 /* Pods-RodrigoLG.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEBC6A572017F2A70014C11F /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */,
+				CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
 		CEBD20782017E27E00DFCBAF = {
 			isa = PBXGroup;
 			children = (
 				CEBD20832017E27E00DFCBAF /* RodrigoLG */,
 				CEBD20822017E27E00DFCBAF /* Products */,
+				8A2E09960E1B79824D0DC528 /* Pods */,
+				61B443875EE5E1C4AC17F400 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +91,7 @@
 		CEBD20832017E27E00DFCBAF /* RodrigoLG */ = {
 			isa = PBXGroup;
 			children = (
+				CEBC6A572017F2A70014C11F /* TableViews */,
 				CEBD20842017E27E00DFCBAF /* AppDelegate.swift */,
 				CEBD20862017E27E00DFCBAF /* ViewController.swift */,
 				CEBD20882017E27E00DFCBAF /* Main.storyboard */,
@@ -71,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEBD20932017E27E00DFCBAF /* Build configuration list for PBXNativeTarget "RodrigoLG" */;
 			buildPhases = (
+				E17E063475C3A5EDF20C1A8F /* [CP] Check Pods Manifest.lock */,
 				CEBD207D2017E27E00DFCBAF /* Sources */,
 				CEBD207E2017E27E00DFCBAF /* Frameworks */,
 				CEBD207F2017E27E00DFCBAF /* Resources */,
+				ED8B0FE920510F9006D64655 /* [CP] Embed Pods Frameworks */,
+				EFE10C1F1F760BFCC226B4FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +172,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E17E063475C3A5EDF20C1A8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RodrigoLG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED8B0FE920510F9006D64655 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFE10C1F1F760BFCC226B4FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEBD207D2017E27E00DFCBAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
 				CEBD20872017E27E00DFCBAF /* ViewController.swift in Sources */,
 				CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */,
+				CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +371,7 @@
 		};
 		CEBD20942017E27E00DFCBAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +387,7 @@
 		};
 		CEBD20952017E27E00DFCBAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05AD22D878B24323B81E7936 /* Pods-RodrigoLG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
