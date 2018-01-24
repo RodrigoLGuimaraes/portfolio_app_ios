@@ -82,8 +82,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.backgroundView = nil
         cell.selectedBackgroundView = nil
         
-        let blogPost: BlogPost = blogPosts[indexPath.row]
-        cell.updateCell(title: blogPost.postTitle, date: Date(), imageURL: blogPost.postImageURL, postText: "")
+        cell.updateCell(post: blogPosts[indexPath.row])
         
         return cell
     }

@@ -19,20 +19,21 @@ class NewsTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func updateCell(title : String, date : Date, imageURL : String, postText : String) {
-        self.titleLabel.text = title
-        self.postText.text = postText
+    func updateCell(post: BlogPost) {
+        self.titleLabel.text = post.postTitle
+        self.postText.text = post.description
         
-        if imageURL.count > 0 {
-            self.postImage.downloadedFrom(link: imageURL)
+        if post.postImageURL.count > 0 {
+            self.postImage.downloadedFrom(link: post.postImageURL)
         } else {
             self.postImage.image = #imageLiteral(resourceName: "rodrigo") //TODO
         }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let dateString = dateFormatter.string(from: date)
-        dateLabel.text = dateString
+
+        //ACTIVATE THIS IF YOU WANT TO USE DATE TYPE
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd/MM/yyyy"
+//        let dateString = dateFormatter.string(from: post.)
+        dateLabel.text = post.pubDate
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
