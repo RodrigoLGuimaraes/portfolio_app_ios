@@ -36,16 +36,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.backgroundColor = UIColor.purple.withAlphaComponent(0)
         tableView.backgroundView = nil
         
-        //Hide navigation controller background
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        
         //Configure Data Load
         let url: URL = URL(string: "http://inovaapps.com.br/feed/rss/")!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
         parser.parse()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //Hide navigation controller background
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,10 +61,20 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "viewpost") {
+            let blogPost: BlogPost = blogPosts[selectedRow]
+            let viewController = segue.destination as! PostViewController
+            viewController.postLink = blogPost.postLink
+        }
+    }
+    
     // MARK: - TABLEVIEWDELEGATE
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        //TODO
+        tableView.deselectRow(at: indexPath, animated: false)
+        self.selectedRow = indexPath.row
+        performSegue(withIdentifier: "viewpost", sender: self)
     }
     
     // MARK: - TABLEVIEWDATASOURCE

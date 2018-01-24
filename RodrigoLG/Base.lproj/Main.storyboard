@@ -7,18 +7,56 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
             <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
         </array>
     </customFonts>
     <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="rj2-ZD-7Hd">
+            <objects>
+                <viewController id="R50-hH-ZRc" customClass="PostViewController" customModule="RodrigoLG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JCj-sK-rxA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Diz-oz-nzv">
+                                <rect key="frame" x="-0.5" y="32" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Qdn-c9-Kry">
+                                <rect key="frame" x="177" y="355" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Diz-oz-nzv" firstAttribute="width" secondItem="JCj-sK-rxA" secondAttribute="width" id="0If-xa-VTs"/>
+                            <constraint firstItem="Diz-oz-nzv" firstAttribute="height" secondItem="JCj-sK-rxA" secondAttribute="height" id="Aos-5h-SAI"/>
+                            <constraint firstItem="Qdn-c9-Kry" firstAttribute="centerY" secondItem="nuE-LV-i7z" secondAttribute="centerY" id="JeD-Md-Orh"/>
+                            <constraint firstItem="Diz-oz-nzv" firstAttribute="centerY" secondItem="nuE-LV-i7z" secondAttribute="centerY" id="kdt-Ht-EMe"/>
+                            <constraint firstItem="Diz-oz-nzv" firstAttribute="centerX" secondItem="nuE-LV-i7z" secondAttribute="centerX" id="vSv-LM-wgX"/>
+                            <constraint firstItem="Qdn-c9-Kry" firstAttribute="centerX" secondItem="nuE-LV-i7z" secondAttribute="centerX" id="x3f-Re-eN4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nuE-LV-i7z"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Qdn-c9-Kry" id="VV0-RB-g7y"/>
+                        <outlet property="webView" destination="Diz-oz-nzv" id="hYv-Tg-5WI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wS-gM-6JO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="-742"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -48,7 +86,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xko-8i-QvS">
                                                             <rect key="frame" x="0.0" y="8" width="355" height="215.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-mg-QgR">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-mg-QgR">
                                                                     <rect key="frame" x="8" y="8" width="339" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                                     <nil key="textColor"/>
@@ -172,8 +210,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodrigo Longhi Guimarães" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-di-04k">
-                                <rect key="frame" x="64.5" y="93.5" width="245.5" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <rect key="frame" x="63.5" y="93.5" width="248" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.059359043836593628" green="0.030690822750329971" blue="0.059493176639080048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -214,13 +252,14 @@
                         <outlet property="profileBtn" destination="tOJ-03-9BF" id="YyI-Om-UmZ"/>
                         <outlet property="profileImgView" destination="gYO-mr-Sv4" id="6Nh-iy-0m2"/>
                         <outlet property="tableView" destination="aQ8-Mm-wKL" id="eDn-k0-1KY"/>
+                        <segue destination="R50-hH-ZRc" kind="show" identifier="viewpost" id="BfI-jY-EOs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="376.80000000000001" y="31.934032983508249"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Perfil-->
         <scene sceneID="SmY-ka-4ZN">
             <objects>
                 <viewController id="pVo-Jl-olC" customClass="ProfileViewController" customModule="RodrigoLG" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,25 +267,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rodrigo" translatesAutoresizingMaskIntoConstraints="NO" id="YRB-3E-3Fu" userLabel="backgroundView">
+                                <rect key="frame" x="0.0" y="64.5" width="375" height="2346.5"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rodrigo" translatesAutoresizingMaskIntoConstraints="NO" id="Dy6-hg-kJF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                <rect key="frame" x="20" y="84.5" width="335" height="1408"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="profilePic"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kTT-rV-DUl">
+                                <rect key="frame" x="8" y="1500.5" width="359" height="902.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8n-gy-1oq" customClass="PersonalizedButton" customModule="RodrigoLG" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="902.5"/>
+                                        <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <state key="normal" title="Sobre mim">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelNumberOfLines">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZy-6D-QiX" customClass="PersonalizedButton" customModule="RodrigoLG" customModuleProvider="target">
+                                        <rect key="frame" x="122.5" y="0.0" width="114" height="902.5"/>
+                                        <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eZy-6D-QiX" secondAttribute="height" multiplier="29:51" id="cxn-gY-hi2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <state key="normal" title="Sobre mim">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gY-Xj-2Wg" customClass="PersonalizedButton" customModule="RodrigoLG" customModuleProvider="target">
+                                        <rect key="frame" x="244.5" y="0.0" width="114.5" height="902.5"/>
+                                        <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <state key="normal" title="Sobre mim">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="top" secondItem="XN1-S4-cm8" secondAttribute="top" id="GNc-JY-YWH"/>
-                            <constraint firstItem="8Mo-QZ-LVd" firstAttribute="trailing" secondItem="Dy6-hg-kJF" secondAttribute="trailing" id="K96-lv-anB"/>
-                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="leading" secondItem="8Mo-QZ-LVd" secondAttribute="leading" id="O1v-cZ-zHB"/>
-                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="height" secondItem="XN1-S4-cm8" secondAttribute="height" multiplier="0.4" id="ctC-w3-v0o"/>
+                            <constraint firstItem="kTT-rV-DUl" firstAttribute="leading" secondItem="8Mo-QZ-LVd" secondAttribute="leading" constant="8" id="3CG-QE-gxY"/>
+                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="height" secondItem="8Mo-QZ-LVd" secondAttribute="height" multiplier="0.6" id="3uz-kZ-zDg"/>
+                            <constraint firstItem="YRB-3E-3Fu" firstAttribute="top" secondItem="XN1-S4-cm8" secondAttribute="topMargin" id="Amz-1l-oBQ"/>
+                            <constraint firstItem="8Mo-QZ-LVd" firstAttribute="trailing" secondItem="Dy6-hg-kJF" secondAttribute="trailing" constant="20" id="K96-lv-anB"/>
+                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="leading" secondItem="8Mo-QZ-LVd" secondAttribute="leading" constant="20" id="O1v-cZ-zHB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YRB-3E-3Fu" secondAttribute="bottom" id="U9F-dw-yKn"/>
+                            <constraint firstItem="Dy6-hg-kJF" firstAttribute="top" secondItem="8Mo-QZ-LVd" secondAttribute="top" constant="20" id="VEr-7a-eD0"/>
+                            <constraint firstItem="8Mo-QZ-LVd" firstAttribute="trailing" secondItem="kTT-rV-DUl" secondAttribute="trailing" constant="8" id="fm3-YM-Zkd"/>
+                            <constraint firstItem="YRB-3E-3Fu" firstAttribute="leading" secondItem="XN1-S4-cm8" secondAttribute="leading" id="gpk-qp-wjS"/>
+                            <constraint firstAttribute="trailing" secondItem="YRB-3E-3Fu" secondAttribute="trailing" id="k3Z-iI-10S"/>
+                            <constraint firstItem="8Mo-QZ-LVd" firstAttribute="bottom" secondItem="kTT-rV-DUl" secondAttribute="bottom" constant="8" id="nTw-pI-a7u"/>
+                            <constraint firstItem="kTT-rV-DUl" firstAttribute="top" secondItem="Dy6-hg-kJF" secondAttribute="bottom" constant="8" id="xmx-k5-pME"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Mo-QZ-LVd"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Perfil" id="zms-cf-aZX"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="backgroundImage" destination="YRB-3E-3Fu" id="ltq-Hl-7io"/>
+                        <outlet property="centerImage" destination="Dy6-hg-kJF" id="l1y-qJ-Ufi"/>
+                        <outlet property="stackViewBottomConstraint" destination="nTw-pI-a7u" id="1KO-td-bMB"/>
+                        <outlet property="stackViewButtons" destination="kTT-rV-DUl" id="a83-qC-Q8G"/>
+                        <outlet property="stackViewTopConstraint" destination="xmx-k5-pME" id="1v7-h4-hJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivb-5d-rO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,7 +365,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HkB-mW-rzy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.99690271229664429" green="0.0" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="0.0" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <userDefinedRuntimeAttributes>

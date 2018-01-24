@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CA5C5AC50EB336DD96DC0FDE /* Pods_RodrigoLG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */; };
+		CE1052B320193E7A00934B02 /* PersonalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1052B220193E7A00934B02 /* PersonalizedButton.swift */; };
+		CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8983AF2019357D001B1A78 /* PostViewController.swift */; };
 		CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */; };
 		CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */; };
 		CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A612017FA630014C11F /* ProfileViewController.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		05AD22D878B24323B81E7936 /* Pods-RodrigoLG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.release.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.release.xcconfig"; sourceTree = "<group>"; };
 		CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.debug.xcconfig"; sourceTree = "<group>"; };
+		CE1052B220193E7A00934B02 /* PersonalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizedButton.swift; sourceTree = "<group>"; };
+		CE8983AF2019357D001B1A78 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		CEBC6A612017FA630014C11F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE1052B120193E6600934B02 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				CE1052B220193E7A00934B02 /* PersonalizedButton.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		CEBC6A572017F2A70014C11F /* TableViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +95,7 @@
 			children = (
 				CEBD20862017E27E00DFCBAF /* HomeViewController.swift */,
 				CEBC6A612017FA630014C11F /* ProfileViewController.swift */,
+				CE8983AF2019357D001B1A78 /* PostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 		CEBD20832017E27E00DFCBAF /* RodrigoLG */ = {
 			isa = PBXGroup;
 			children = (
+				CE1052B120193E6600934B02 /* Style */,
 				CEBC6A66201800590014C11F /* BlogHandling */,
 				CEBC6A632018002C0014C11F /* Helpers */,
 				CEBC6A5C2017F9C80014C11F /* Controllers */,
@@ -269,12 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */,
 				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
 				CEBD20872017E27E00DFCBAF /* HomeViewController.swift in Sources */,
 				CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */,
 				CEBC6A6A2018007C0014C11F /* Helpers.swift in Sources */,
 				CEBC6A65201800430014C11F /* UIImageView+download.swift in Sources */,
 				CEBC6A68201800670014C11F /* BlogPost.swift in Sources */,
+				CE1052B320193E7A00934B02 /* PersonalizedButton.swift in Sources */,
 				CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */,
 				CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */,
 			);
