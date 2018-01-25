@@ -24,6 +24,7 @@
 		CEBD208C2017E27E00DFCBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBD208B2017E27E00DFCBAF /* Assets.xcassets */; };
 		CEBD208F2017E27E00DFCBAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD208D2017E27E00DFCBAF /* LaunchScreen.storyboard */; };
 		CEFB74FE201A8CA700AF2E62 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */; };
+		CEFB7500201A9C3C00AF2E62 /* EasterEggViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB74FF201A9C3C00AF2E62 /* EasterEggViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CEBD208E2017E27E00DFCBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBD20902017E27E00DFCBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		CEFB74FF201A9C3C00AF2E62 /* EasterEggViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasterEggViewController.swift; sourceTree = "<group>"; };
 		DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RodrigoLG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				CEBC6A612017FA630014C11F /* ProfileViewController.swift */,
 				CE8983AF2019357D001B1A78 /* PostViewController.swift */,
 				CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */,
+				CEFB74FF201A9C3C00AF2E62 /* EasterEggViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,11 +262,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/LLSwitch/LLSwitch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLSwitch.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -292,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFB7500201A9C3C00AF2E62 /* EasterEggViewController.swift in Sources */,
 				CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */,
 				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
 				CEFB74FE201A8CA700AF2E62 /* ContactViewController.swift in Sources */,

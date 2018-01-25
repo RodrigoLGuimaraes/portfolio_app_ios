@@ -559,35 +559,14 @@
             </objects>
             <point key="canvasLocation" x="1274" y="-718"/>
         </scene>
-        <!--View Controller-->
+        <!--Easter Egg View Controller-->
         <scene sceneID="sf6-bV-yfo">
             <objects>
-                <viewController id="p90-EI-FDg" sceneMemberID="viewController">
+                <viewController id="p90-EI-FDg" customClass="EasterEggViewController" customModule="RodrigoLG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="unk-2D-rpL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk5-Lc-pGB">
-                                <rect key="frame" x="20" y="580.5" width="335" height="66.5"/>
-                                <color key="backgroundColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                <state key="normal" title="CRESCER">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.1899853349" green="0.35768887399999999" blue="0.43821841480000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="zRe-gc-kjl" firstAttribute="trailing" secondItem="Bk5-Lc-pGB" secondAttribute="trailing" constant="20" id="0Rw-1p-Bx2"/>
-                            <constraint firstItem="Bk5-Lc-pGB" firstAttribute="height" secondItem="unk-2D-rpL" secondAttribute="height" multiplier="0.1" id="Np5-tT-KJg"/>
-                            <constraint firstItem="zRe-gc-kjl" firstAttribute="bottom" secondItem="Bk5-Lc-pGB" secondAttribute="bottom" constant="20" id="TR5-y5-eH6"/>
-                            <constraint firstItem="Bk5-Lc-pGB" firstAttribute="leading" secondItem="zRe-gc-kjl" secondAttribute="leading" constant="20" id="wBZ-vL-euI"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zRe-gc-kjl"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="easterEgg"/>

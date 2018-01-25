@@ -8,4 +8,5 @@ target 'RodrigoLG' do
   # Pods for RodrigoLG
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'Hero'
+  pod 'LLSwitch'
 end
