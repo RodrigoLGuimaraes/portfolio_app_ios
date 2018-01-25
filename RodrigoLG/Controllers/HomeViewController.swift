@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundBottomView: UIView!
     @IBOutlet weak var backgroundTopView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     // MARK: - Properties
@@ -40,14 +41,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.backgroundColor = UIColor.purple.withAlphaComponent(0)
         tableView.backgroundView = nil
         
-        //Configure Data Load
-        let url: URL = URL(string: "http://inovaapps.com.br/feed/rss/")!
-        parser = XMLParser(contentsOf: url)!
-        parser.delegate = self
-        parser.parse()
-        
         backgroundTopView.image = UIImage(named: BACKGROUND_NAMES[currentBG])
         backgroundBottomView.backgroundColor = IMAGE_BOTTOM_COLOR[BACKGROUND_NAMES[self.currentBG]]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+        DispatchQueue.global().async {
+            //Configure Data Load
+            let url: URL = URL(string: "http://inovaapps.com.br/feed/rss/")!
+            self.parser = XMLParser(contentsOf: url)!
+            self.parser.delegate = self
+            self.parser.parse()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,7 +134,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             descriptionStr = String()
             pubDate = String()
         }
-        print(elementName)
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
@@ -154,6 +162,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             blogPost.description = descriptionStr.html2String
             blogPost.pubDate = pubDate
             blogPosts.append(blogPost)
+        }
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        DispatchQueue.main.async {
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
+            self.tableView.reloadData()
         }
     }
 

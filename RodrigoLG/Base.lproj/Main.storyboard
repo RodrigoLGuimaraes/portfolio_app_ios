@@ -169,12 +169,23 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oQF-Xu-Arz">
+                                        <rect key="frame" x="169" y="148.5" width="37" height="37"/>
+                                        <color key="backgroundColor" red="0.38526773452758789" green="0.13679999113082886" blue="0.1175478994846344" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.035294117647058823" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="aQ8-Mm-wKL" secondAttribute="trailing" constant="10" id="Ea0-Lw-Xur"/>
                                     <constraint firstAttribute="bottom" secondItem="aQ8-Mm-wKL" secondAttribute="bottom" id="Ked-gH-z7L"/>
                                     <constraint firstItem="aQ8-Mm-wKL" firstAttribute="leading" secondItem="fIz-iK-w4u" secondAttribute="leading" constant="10" id="QLb-Vs-jlh"/>
+                                    <constraint firstItem="oQF-Xu-Arz" firstAttribute="centerX" secondItem="fIz-iK-w4u" secondAttribute="centerX" id="dkP-Wz-lv0"/>
+                                    <constraint firstItem="oQF-Xu-Arz" firstAttribute="centerY" secondItem="fIz-iK-w4u" secondAttribute="centerY" id="qU3-7H-BLO"/>
                                     <constraint firstItem="aQ8-Mm-wKL" firstAttribute="top" secondItem="fIz-iK-w4u" secondAttribute="top" constant="8" id="wGh-Qk-hIy"/>
                                 </constraints>
                             </view>
@@ -259,6 +270,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="activityIndicator" destination="oQF-Xu-Arz" id="4n8-57-vqa"/>
                         <outlet property="backgroundBottomView" destination="fIz-iK-w4u" id="SSD-b2-Goa"/>
                         <outlet property="backgroundTopView" destination="V3b-Uu-5AU" id="8ZN-Vl-bmq"/>
                         <outlet property="profileBackgroundView" destination="vFX-Wy-7WG" id="iO4-aj-lEU"/>
