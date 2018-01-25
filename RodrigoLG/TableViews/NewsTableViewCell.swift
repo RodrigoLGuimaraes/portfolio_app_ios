@@ -26,7 +26,7 @@ class NewsTableViewCell: UITableViewCell {
         if post.postImageURL.count > 0 {
             self.postImage.downloadedFrom(link: post.postImageURL)
         } else {
-            self.postImage.image = #imageLiteral(resourceName: "rodrigo") //TODO
+            self.postImage.image = #imageLiteral(resourceName: "noImage")
         }
 
         //ACTIVATE THIS IF YOU WANT TO USE DATE TYPE

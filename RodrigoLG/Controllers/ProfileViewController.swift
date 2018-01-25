@@ -24,6 +24,11 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        stackViewButtons.heroModifiers = [.cascade]
+        for btn in stackViewButtons.arrangedSubviews {
+            btn.heroModifiers = [.fade, .scale(0.5), .durationMatchLongest]
+        }
+        
         // Do any additional setup after loading the view.
         let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         visualEffectView.frame = backgroundImage.bounds

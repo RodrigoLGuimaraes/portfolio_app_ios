@@ -15,6 +15,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var profileBackgroundView: UIView!
     @IBOutlet weak var profileBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backgroundBottomView: UIView!
+    @IBOutlet weak var backgroundTopView: UIImageView!
+    
     
     // MARK: - Properties
     var parser: XMLParser = XMLParser()
@@ -26,6 +29,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var pubDate: String = String()
     var eName: String = String()
     var selectedRow : Int = 0
+    var currentBG : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
         parser.parse()
+        
+        backgroundTopView.image = UIImage(named: BACKGROUND_NAMES[currentBG])
+        backgroundBottomView.backgroundColor = IMAGE_BOTTOM_COLOR[BACKGROUND_NAMES[self.currentBG]]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +68,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didAskForBgChange(_ sender: Any) {
+        currentBG = (currentBG + 1) % BACKGROUND_NAMES.count
+        self.backgroundTopView.image = UIImage(named: BACKGROUND_NAMES[self.currentBG])
+        self.backgroundBottomView.backgroundColor = IMAGE_BOTTOM_COLOR[BACKGROUND_NAMES[self.currentBG]]
+    }
+    
+    
+    
     // MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "viewpost") {
@@ -136,7 +151,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             blogPost.postTitle = postTitle
             blogPost.postLink = postLink
             blogPost.postImageURL = getFirstImageFromContent(postImageURL)
-            blogPost.description = descriptionStr
+            blogPost.description = descriptionStr.html2String
             blogPost.pubDate = pubDate
             blogPosts.append(blogPost)
         }

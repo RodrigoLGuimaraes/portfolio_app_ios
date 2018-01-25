@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CA5C5AC50EB336DD96DC0FDE /* Pods_RodrigoLG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */; };
 		CE1052B320193E7A00934B02 /* PersonalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1052B220193E7A00934B02 /* PersonalizedButton.swift */; };
+		CE6B73AD20194A2E00CD72A6 /* String+HTMLParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B73AC20194A2E00CD72A6 /* String+HTMLParsing.swift */; };
+		CE6B73AF20194CF400CD72A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B73AE20194CF400CD72A6 /* Constants.swift */; };
 		CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8983AF2019357D001B1A78 /* PostViewController.swift */; };
 		CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */; };
 		CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */; };
@@ -21,12 +23,15 @@
 		CEBD208A2017E27E00DFCBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD20882017E27E00DFCBAF /* Main.storyboard */; };
 		CEBD208C2017E27E00DFCBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBD208B2017E27E00DFCBAF /* Assets.xcassets */; };
 		CEBD208F2017E27E00DFCBAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBD208D2017E27E00DFCBAF /* LaunchScreen.storyboard */; };
+		CEFB74FE201A8CA700AF2E62 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05AD22D878B24323B81E7936 /* Pods-RodrigoLG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.release.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.release.xcconfig"; sourceTree = "<group>"; };
 		CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1052B220193E7A00934B02 /* PersonalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizedButton.swift; sourceTree = "<group>"; };
+		CE6B73AC20194A2E00CD72A6 /* String+HTMLParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLParsing.swift"; sourceTree = "<group>"; };
+		CE6B73AE20194CF400CD72A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE8983AF2019357D001B1A78 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CEBC6A582017F2BE0014C11F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CEBC6A5A2017F6A50014C11F /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		CEBD208B2017E27E00DFCBAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBD208E2017E27E00DFCBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBD20902017E27E00DFCBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RodrigoLG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +102,7 @@
 				CEBD20862017E27E00DFCBAF /* HomeViewController.swift */,
 				CEBC6A612017FA630014C11F /* ProfileViewController.swift */,
 				CE8983AF2019357D001B1A78 /* PostViewController.swift */,
+				CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +112,8 @@
 			children = (
 				CEBC6A692018007C0014C11F /* Helpers.swift */,
 				CEBC6A64201800430014C11F /* UIImageView+download.swift */,
+				CE6B73AC20194A2E00CD72A6 /* String+HTMLParsing.swift */,
+				CE6B73AE20194CF400CD72A6 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 			files = (
 				CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */,
 				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
+				CEFB74FE201A8CA700AF2E62 /* ContactViewController.swift in Sources */,
 				CEBD20872017E27E00DFCBAF /* HomeViewController.swift in Sources */,
 				CEBC6A622017FA630014C11F /* ProfileViewController.swift in Sources */,
 				CEBC6A6A2018007C0014C11F /* Helpers.swift in Sources */,
@@ -292,7 +302,9 @@
 				CEBC6A68201800670014C11F /* BlogPost.swift in Sources */,
 				CE1052B320193E7A00934B02 /* PersonalizedButton.swift in Sources */,
 				CEBD20852017E27E00DFCBAF /* AppDelegate.swift in Sources */,
+				CE6B73AD20194A2E00CD72A6 /* String+HTMLParsing.swift in Sources */,
 				CEBC6A592017F2BE0014C11F /* NewsTableViewCell.swift in Sources */,
+				CE6B73AF20194CF400CD72A6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
