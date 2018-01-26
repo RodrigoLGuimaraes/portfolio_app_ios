@@ -9,9 +9,12 @@
 import UIKit
 import LLSwitch
 import ChameleonFramework
+import SAConfettiView
 
 class EasterEggViewController: UIViewController, LLSwitchDelegate {
 
+    var confettiView : SAConfettiView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +33,16 @@ class EasterEggViewController: UIViewController, LLSwitchDelegate {
     func valueDidChanged(_ llSwitch: LLSwitch!, on: Bool) {
         if on {
             //Play animation
+            let confettiView = SAConfettiView(frame: self.view.bounds)
+            confettiView.type = .Image(UIImage(named: "smiley")!)
+            self.view.addSubview(confettiView)
+            confettiView.startConfetti()
         } else {
             //Stop animation
+            if let view = confettiView {
+                view.removeFromSuperview()
+                confettiView = nil
+            }
         }
     }
 

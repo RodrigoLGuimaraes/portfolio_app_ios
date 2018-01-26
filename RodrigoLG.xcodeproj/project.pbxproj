@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA5C5AC50EB336DD96DC0FDE /* Pods_RodrigoLG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAF20F9BC20C93340DFC09A /* Pods_RodrigoLG.framework */; };
 		CE1052B320193E7A00934B02 /* PersonalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1052B220193E7A00934B02 /* PersonalizedButton.swift */; };
+		CE59E08F201BE2B5004F7622 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59E08E201BE2B5004F7622 /* AboutMeViewController.swift */; };
 		CE6B73AD20194A2E00CD72A6 /* String+HTMLParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B73AC20194A2E00CD72A6 /* String+HTMLParsing.swift */; };
 		CE6B73AF20194CF400CD72A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B73AE20194CF400CD72A6 /* Constants.swift */; };
 		CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8983AF2019357D001B1A78 /* PostViewController.swift */; };
@@ -31,6 +32,7 @@
 		05AD22D878B24323B81E7936 /* Pods-RodrigoLG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.release.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.release.xcconfig"; sourceTree = "<group>"; };
 		CA7DE8FD161045448D170D09 /* Pods-RodrigoLG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RodrigoLG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RodrigoLG/Pods-RodrigoLG.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1052B220193E7A00934B02 /* PersonalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizedButton.swift; sourceTree = "<group>"; };
+		CE59E08E201BE2B5004F7622 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		CE6B73AC20194A2E00CD72A6 /* String+HTMLParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLParsing.swift"; sourceTree = "<group>"; };
 		CE6B73AE20194CF400CD72A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE8983AF2019357D001B1A78 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CE8983AF2019357D001B1A78 /* PostViewController.swift */,
 				CEFB74FD201A8CA700AF2E62 /* ContactViewController.swift */,
 				CEFB74FF201A9C3C00AF2E62 /* EasterEggViewController.swift */,
+				CE59E08E201BE2B5004F7622 /* AboutMeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,12 +266,14 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/LLSwitch/LLSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -298,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFB7500201A9C3C00AF2E62 /* EasterEggViewController.swift in Sources */,
+				CE59E08F201BE2B5004F7622 /* AboutMeViewController.swift in Sources */,
 				CE8983B02019357D001B1A78 /* PostViewController.swift in Sources */,
 				CEBC6A5B2017F6A50014C11F /* FadingTableView.swift in Sources */,
 				CEFB74FE201A8CA700AF2E62 /* ContactViewController.swift in Sources */,

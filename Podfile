@@ -9,4 +9,5 @@ target 'RodrigoLG' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'Hero'
   pod 'LLSwitch'
+  pod 'SAConfettiView'
 end
